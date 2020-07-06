@@ -74,10 +74,12 @@ Site is up and running with empty database.
 Create Super User and see if all pages function (except the raw view pages.  these did not work with sqllite)
 
 **Lingering error with creating classview entry**
-`web_1  | Quit the server with CONTROL-C.
+```
+web_1  | Quit the server with CONTROL-C.
 web_1  | [30/Jun/2020 22:48:51] "GET /classview/create/ HTTP/1.1" 200 1503
 web_1  | FORM NOT SAVED
-web_1  | [30/Jun/2020 22:48:56] "POST /classview/create/ HTTP/1.1" 200 1503`
+web_1  | [30/Jun/2020 22:48:56] "POST /classview/create/ HTTP/1.1" 200 1503
+```
 
 
 ## Reference Material
