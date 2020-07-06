@@ -52,7 +52,7 @@ At this point, we can copy over the project files and rerun docker-compose, with
 Now that the app runs on sqllite, try switching over to postgres.  It will be a blank database at first, but should function.
 Edit settings.py with new database info: 
 
-``` json
+``` 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
