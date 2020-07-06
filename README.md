@@ -51,7 +51,7 @@ At this point, we can copy over the project files and rerun docker-compose, with
 
 Now that the app runs on sqllite, try switching over to postgres.  It will be a blank database at first, but should function.
 Edit settings.py with new database info 
-DATABASES = {
+`DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
@@ -60,7 +60,7 @@ DATABASES = {
         'HOST': 'db',
         'PORT': 5432,
     }
-}
+}`
 **ERROR RUNNING PORTED APP**
 The price field in the products model was not accepted by postgres.  I tried to update the model, but it didn't seem to matter.  The problem was the old migrations in the migrations folders.  I did update those, but I could also delete them.
 
