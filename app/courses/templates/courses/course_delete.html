@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST'> {% csrf_token %}
+	<p>Do you want to delete the course "{{ object.title }}" ?</p>
+	<input type='submit' value='Yes' /> <a href="../update/">Cancel</a>
+</form>
+{% endblock %}

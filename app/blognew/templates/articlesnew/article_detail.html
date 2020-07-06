@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>New Blog template: {{ object.title }}</h1>
+
+<p>{% if object.content != None and object.content != '' %}{{object.content}}{% else %}Content Coming Soon{% endif %}</p>
+
+<p>
+	{{ object.price}}
+</p>
+<p><a href='/articlesnew/'>return to list</a> | <a href='{{ object.get_absolute_url }}update/'>edit</a></p>
+
+{% endblock %}

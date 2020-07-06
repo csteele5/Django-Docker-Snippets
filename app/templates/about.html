@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+{% block content %}
+<h1>About</h1>
+<h5>{{ title|title }}</h5>
+<p>This is a template</p>
+{{ my_html|safe }}
+{{ my_html|striptags }}
+{{ my_html|striptags|slugify }}
+<p>
+	{{ my_text }}, 
+	{{ my_number }}, 
+	{{ my_list }}
+</p>
+<ul>
+	{% for item in my_list %}
+		{% if item > 300 %}
+		<li>{{ forloop.counter }} - {{ item }}</li>
+		{% else %}
+		<li>{{ forloop.counter }} - {{ item|add:22 }}</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+{% endblock %}

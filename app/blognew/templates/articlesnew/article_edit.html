@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST'> {% csrf_token %}
+	{{ form.as_p }}
+	<input type='submit' value='Save' /> <a href="../delete/">Delete</a>
+	<p><a href='/articlesnew/'>return to list</a></p>
+	<p>Object ID: {{ form.id }}</p>
+	
+	<ul>
+	{% for field in form %}
+		<!-- {{ field.label_tag }} {{ field }} -->
+		<li>
+			label: {{ field.label }}<br>
+			id_for_label: {{ field.id_for_label }}<br>
+			html_name: {{ field.html_name }}<br>
+			value: {{ field.value }}<br>
+		</li>
+	{% endfor %}
+	</ul>
+</form>
+{% endblock %}

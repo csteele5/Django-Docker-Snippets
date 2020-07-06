@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Course: {{ object.title }}</h1>
+<h3>Instructor: {{ object.instructor }}</h3>
+
+<p>{% if object.description != None and object.description != '' %}{{object.description}}{% else %}Description Coming Soon{% endif %}</p>
+
+<p><a href='/courses/'>return to list</a> | <a href='{{ object.get_absolute_url }}update/'>edit</a></p>
+
+{% endblock %}
