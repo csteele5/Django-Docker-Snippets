@@ -80,23 +80,23 @@ web_1  | [30/Jun/2020 22:48:56] "POST /classview/create/ HTTP/1.1" 200 1503
 
 **[Django Tutorial](https://www.youtube.com/watch?v=F5mRW0jo-U4)**
 
-1:15 Installing. Virtual environment
-18:54 Set up code text editor
-22:27 Django settings
-29:48 Built-In components
-46:22 New model fields
-59:27 Custom homepage
-1:04:08 URL routing
-1:16:50 Django templating engine basics
-1:23:59 Include template tag
-1:49:09 Render data from the database with a model
-2:06:50 Django model forms
-2:35:33 Form widgets
-2:41:29 Form validation methods
-2:48:59 Initial values for forms
-3:00:00 Dynamic linking of URLs
-3:03:10 In app URLs and Namespacing
-3:15:42 Class based views – CreateView
+- 1:15 Installing. Virtual environment
+- 18:54 Set up code text editor
+- 22:27 Django settings
+- 29:48 Built-In components
+- 46:22 New model fields
+- 59:27 Custom homepage
+- 1:04:08 URL routing
+- 1:16:50 Django templating engine basics
+- 1:23:59 Include template tag
+- 1:49:09 Render data from the database with a model
+- 2:06:50 Django model forms
+- 2:35:33 Form widgets
+- 2:41:29 Form validation methods
+- 2:48:59 Initial values for forms
+- 3:00:00 Dynamic linking of URLs
+- 3:03:10 In app URLs and Namespacing
+- 3:15:42 Class based views – CreateView
 
 **[Docker Setup Steps](https://docs.docker.com/compose/django/)**
 
