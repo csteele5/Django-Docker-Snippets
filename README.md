@@ -52,7 +52,7 @@ At this point, we can copy over the project files and rerun docker-compose, with
 Now that the app runs on sqllite, try switching over to postgres.  It will be a blank database at first, but should function.
 Edit settings.py with new database info: 
 
-`DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
@@ -61,7 +61,7 @@ Edit settings.py with new database info:
         'HOST': 'db',
         'PORT': 5432,
     }
-}`
+}'''
 
 **ERROR RUNNING PORTED APP**
 The price field in the products model was not accepted by postgres.  I tried to update the model, but it didn't seem to matter.  The problem was the old migrations in the migrations folders.  I did update those, but I could also delete them.
@@ -72,10 +72,10 @@ Site is up and running with empty database.
 Create Super User and see if all pages function (except the raw view pages.  these did not work with sqllite)
 
 **Lingering error with creating classview entry**
-web_1  | Quit the server with CONTROL-C.
+`web_1  | Quit the server with CONTROL-C.
 web_1  | [30/Jun/2020 22:48:51] "GET /classview/create/ HTTP/1.1" 200 1503
 web_1  | FORM NOT SAVED
-web_1  | [30/Jun/2020 22:48:56] "POST /classview/create/ HTTP/1.1" 200 1503
+web_1  | [30/Jun/2020 22:48:56] "POST /classview/create/ HTTP/1.1" 200 1503`
 
 
 ## Reference Material
