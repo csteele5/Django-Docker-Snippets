@@ -12,8 +12,10 @@ This project is initially setup with manual steps that must be run to set up the
 Create project directory
 Create Dockerfile, requirements.txt, docker-compose.yml
 Run the following: 
-`sudo docker-compose run web django-admin startproject composeexample .`
-`sudo chown -R $USER:$USER .`
+```
+sudo docker-compose run web django-admin startproject composeexample .
+sudo chown -R $USER:$USER .
+```
 
 Update the settings.py per the documentation to connect to the database.  This replaces the sqllite connection with postgres in the adjacent container
 
@@ -21,12 +23,14 @@ Bring the image back up:
 `docker-compose up`
 
 To run multiple commands in the web image, replace the command statement in the yml file with this:
-	`#command: python manage.py runserver 0.0.0.0:8000
+	```
+    #command: python manage.py runserver 0.0.0.0:8000
     context: .
     command: >
         sh -c "python manage.py wait_for_db &&
                python manage.py migrate &&
-               python manage.py runserver 0.0.0.0:8000"`
+               python manage.py runserver 0.0.0.0:8000"
+    ```
 
 To manually create superuser:
 `sudo docker-compose run web python manage.py createsuperuser`
@@ -39,8 +43,10 @@ Delete the sqllite and manage.py file
 Now we start over:
 Start a new project where your existing project files will be placed.
 This may be set up as a volume as well as a source (let's see).  But first, a simple source.
-`docker-compose up --build`   (web will close automatically)
-`sudo docker-compose run web django-admin startproject djangosnippets .`
+```
+docker-compose up --build   (web will close automatically)
+sudo docker-compose run web django-admin startproject djangosnippets .
+```
 
 Now run 'docker-compose up' again.  This will create the sqllite file.  
 NOTE: we are not running on postgres yet!  This is just to verify the project will run from the original tutorial
